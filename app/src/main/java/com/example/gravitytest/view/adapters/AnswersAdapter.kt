@@ -7,17 +7,17 @@ import androidx.recyclerview.widget.DiffUtil
 import com.example.gravitytest.data.Question
 import com.example.gravitytest.databinding.AnswersItemBinding
 
-class RVAdapter(
+class AnswersAdapter(
     private val onItemClick: (items: FrameLayout) -> Unit
-) : androidx.recyclerview.widget.ListAdapter<Question, RVVIewHolder>(itemComparator) {
+) : androidx.recyclerview.widget.ListAdapter<Question, AnswersVIewHolder>(itemComparator) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVVIewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnswersVIewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding = AnswersItemBinding.inflate(layoutInflater)
-        return RVVIewHolder(binding, onItemClick)
+        return AnswersVIewHolder(binding, onItemClick)
     }
 
-    override fun onBindViewHolder(holder: RVVIewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AnswersVIewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 

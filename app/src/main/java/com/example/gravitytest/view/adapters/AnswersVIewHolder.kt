@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.gravitytest.data.Question
 import com.example.gravitytest.databinding.AnswersItemBinding
 
-class RVVIewHolder(
+class AnswersVIewHolder(
     private val binding: AnswersItemBinding,
     private val onItemClick: (item: FrameLayout) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
